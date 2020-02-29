@@ -10,7 +10,7 @@ class StoriesController extends Controller
     public function index(Request $request) {
         $stories = Story::query()
             ->orderBy('created_at', 'desc')
-            ->get();
+            ->paginate(2);
         return view('stories.story-index')
             ->with('stories', $stories);
     }

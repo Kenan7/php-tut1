@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('pageTitle', ' - Stories')
+
 @section('content')
 <div class="container">
     <div class="row">
@@ -24,6 +26,9 @@
                     @endforeach
                 </tbody>
             </table>
+
+            {{ $stories->render() }}
         </div>
     </div>
 </div>
+@endsection
